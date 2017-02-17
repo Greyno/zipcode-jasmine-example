@@ -1,0 +1,103 @@
+.todo-app {
+    margin: auto;
+    min-width: 800px;
+    width: 80%;
+}
+
+#tmpl-color-bar-blue {
+    background-color: #3892dd;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+#tmpl-color-bar-grey {
+    background-color: #afafaf;
+    float: right;
+    height: 3px;
+    width: 676px;
+}
+#tmpl-color-bar-orange {
+    background-color: #f07419;
+    float: right;
+    height: 3px;
+    width: 338px;
+}
+#tmpl-container {
+    border: 1px solid #d2d2d2;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 100px;
+    max-width: 850px;
+}
+#tmpl-footer {
+    background-color: #dedfe3;
+    padding: 10px 0 10px 35px;
+}
+#mainPane {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+.container-example {
+    background-color: #f8f8f8;
+    padding: 35px;
+}
+.section-example {
+    margin-top: 25px;
+}
+.button-example {
+    background-color: #5c95cf;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 10px 0 0;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    width: 175px;
+}
+.button-example:hover, .button-example:active {
+    background-color: #336eab;
+}
+#list-container {
+    background-color: #eeeff2;
+    margin-top: 10px;
+    padding: 10px;
+}
+#list-container ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+#list-container input {
+    cursor: pointer;
+}
+.style-bad {
+    color: #9c2140;
+}
+.style-selected {
+    font-weight: bold;
+}
+.button-delete {
+    background-color: #9c2140 !important;
+}
+#list-controls {
+    margin-top: 25px;
+}
+.list-buttons {
+    float: right;
+}
+.input-text {
+    box-sizing: border-box;
+    padding: 5px;
+    height: 30px;
+    width: 250px;
+}
+.input-button {
+    margin-left: 5px;
+    height: 30px;
+    width: 100px;
+}

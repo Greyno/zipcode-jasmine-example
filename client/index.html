@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jasmine Example</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/example-app.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Todo Example</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Todo App <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron todo-app" ng-app="todo-app" ng-strict-di>
+        <div class="container" ng-controller="TodoController as ctrl">
+            <h2>My Todo App</h2>
+            <section id="list-controls">
+                <section class="list-buttons ng-cloak" ng-if="ctrl.hasSelectedItems()" ng-cloak>
+                    <button type="button" class="btn btn-default" ng-click="ctrl.toggleSelectedItems()">Toggle State</button>
+                    <button type="button" class="btn btn-default" ng-click="ctrl.deleteSelectedItems()">Remove Item</button>
+                </section>
+                <form ng-submit="ctrl.addNewItem()">
+                    <input class="input-text" type="text" ng-model="ctrl.newItemName" placeholder="Item Name" />
+                    <input class="input-button" type="submit" value="Add Item" ng-disabled="!ctrl.newItemName" />
+                </form>
+            </section>
+            <section id="list-container" class="ng-cloak" ng-if="ctrl.itemList.length > 0" ng-cloak>
+                <ul>
+                    <li ng-repeat="item in ctrl.itemList">
+                        <label ng-class="{ 'style-bad': item.IsBad, 'style-selected': item.isSelected }">
+                            <input type="checkbox" ng-model="item.isSelected" />
+                            {{item.Name}}
+                        </label>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-success" ng-click="ctrl.saveTodos()">Save</button>
+            </section>
+        </div>
+    </div>
+
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="angular/angular.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/example-app.min.js"></script>
+</body>
+</html>
